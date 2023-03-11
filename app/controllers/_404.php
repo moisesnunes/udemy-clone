@@ -1,10 +1,12 @@
 <?php
 
 // 404 class página não encontrada.
-class _404
+class _404 extends Controller
 {
-    function __construct()
+    public function index()
     {
-        echo "Página não encontrada.";
+        $data['title'] = "404";
+
+        $this->view('404', $data);
     }
 }

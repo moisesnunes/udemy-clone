@@ -1,19 +1,14 @@
-<?php 
+<?php
 
-class Home
+class Home extends Controller
 {
     public function index()
     {
-        echo "Home Page";
-    }
+        //$users = new User();
+        //$users->insert($data);
 
-    public function edit()
-    {
-        echo "Edit Page";
-    }
+        $data['title'] = "Home";
 
-    public function new()
-    {
-        echo "New Page";
+        $this->view('home', $data);
     }
 }
